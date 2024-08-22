@@ -56,7 +56,7 @@ ul li {
   position: absolute;
   left: 0;
   color: #4e4e4e;
-  font-family: "Ionicons";
+  
 }
 
 .social-block {
@@ -181,7 +181,7 @@ ul li {
  * 3.3 Helper Class: list
  */
 .list-arrow-right li::before {
-  content: "\f3d3";
+  content: ">";
 }
 
 /* 
@@ -474,8 +474,6 @@ ul li {
 /* 
  * 6.7 Section: Schedule
  */
-.partner {
-}
 .partner .partner-box {
   display: block;
   opacity: 0.3;
