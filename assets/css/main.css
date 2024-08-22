@@ -536,8 +536,7 @@ ul li {
   margin-bottom: 15px;
 }
 .faq .faq-toggle.collapsed::before {
-  font-family: "Ionicons";
-  content: "\f218";
+  content: "＋";
   -webkit-transition: 0.5s linear ease-out;
           transition: 0.5s linear ease-out;
   position: absolute;
@@ -545,9 +544,10 @@ ul li {
 }
 .faq .faq-toggle::before {
   position: absolute;
-  left: 15px;
-  font-family: "Ionicons";
-  content: "\f209";
+  font-size: 20px;
+  left: 14px;
+  line-height: 18px;
+  content: "ー";
 }
 .faq .panel-group .card + .card {
   margin-top: 15px;
