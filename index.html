@@ -1,604 +1,749 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japan trials project KAIZEN 2025</title>
 
-    <title>Japan trials project KAIZEN</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="キレとスピードを最短で掴む。競技横断の最新メソッドで、あなたの弱点をピンポイント強化。データ×技術×メンタルで、次のステージへ。"
+    />
+    <meta
+      name="keywords"
+      content="トライアル,バイク,スポーツ,トレーニング,キャンプ,技術向上,Jonas Friedrich,ヨナス・フリードリッヒ"
+    />
+    <meta name="author" content="Japan trials project KAIZEN" />
 
-    <meta property="og:url" content="https://jofr-meets.jp" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Japan trials project KAIZEN" />
+    <meta property="og:url" content="https://jofr-meets.jp/" />
+    <meta property="og:title" content="Japan trials project KAIZEN 2025" />
     <meta
       property="og:description"
-      content="ドイツで活躍するJonas Friedrich率いるJOFRのトライアルトレーニングプログラムが2024年に引き続き、そしてパワーアップして開催されます。"
+      content="ドイツの元エリートライダー Jonas Friedrich による自転車トライアル競技キャンプ。JOFRアカデミーのメソッドでトライアルの技術をKAIZENします。"
     />
-    <meta property="og:site_name" content="Japan trials project KAIZEN" />
     <meta
       property="og:image"
+      content="https://jofr-meets.jp/assets/images/ogp-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Japan trials project KAIZEN" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jofr-meets.jp/" />
+    <meta property="twitter:title" content="Japan trials project KAIZEN 2025" />
+    <meta
+      property="twitter:description"
+      content="競技横断の最新メソッドで、あなたの弱点をピンポイント強化。データ×技術×メンタルで、次のステージへ。"
+    />
+    <meta
+      property="twitter:image"
       content="https://jofr-meets.jp/assets/images/7S305139.jpg"
     />
 
-    <!-- css -->
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jofr-meets.jp/" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://jofr-meets.jp/assets/images/logo.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://jofr-meets.jp/assets/images/apple-touch-icon.png"
+    />
+
+    <!-- Tailwind (CDN) -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <!-- AOS (Animate On Scroll) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.4.0/luminous-basic.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      .accent {
+        color: #ffd400;
+      }
+      /* Simple aspect-ratio helpers (no plugin required) */
+      .ratio {
+        position: relative;
+        width: 100%;
+      }
+      .ratio-16x10::before {
+        content: "";
+        display: block;
+        padding-top: 62.5%;
+      }
+      .ratio-16x9::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+      }
+      .ratio > * {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      /* Subtle hover lift */
+      .lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      }
+    </style>
   </head>
-  <body data-spy="scroll" data-target="#site-nav">
-    <nav
-      id="site-nav"
-      class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark"
+  <body>
+    <!-- ヘッダー -->
+    <header
+      class="sticky top-0 z-50 bg-black bg-opacity-70 backdrop-blur border-b border-white border-opacity-10"
     >
-      <div class="container">
-        <div class="navbar-header">
-          <!-- logo -->
-          <div class="site-branding">
-            <a
-              class="logo d-flex align-items-center"
-              style="gap: 8px"
-              href="index.html"
-            >
-              <!-- logo image  -->
-              <div class="bg-white rounded p-1">
-                <img src="assets/images/logo.svg" alt="Logo" height="80" />
-              </div>
-              <div>
-                Japan trials <br class="d-block d-sm-none" />project KAIZEN
-              </div>
-            </a>
+      <div
+        class="max-w-6xl mx-auto px-4 h-24 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <div class="bg-white rounded p-1 flex items-center justify-center">
+            <img src="assets/images/logo.svg" alt="Logo" class="h-16 w-auto" />
           </div>
-
-          <button
-            class="navbar-toggler ml-auto d-block d-lg-none"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbar-items"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          <a href="#top" class="text-lg font-extrabold tracking-widest"
+            >Japan trials project <span class="accent">KAIZEN</span></a
           >
-            <span class="navbar-toggler-icon"></span>
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
         </div>
-        <!-- /.navbar-header -->
-
-        <div class="collapse navbar-collapse" id="navbar-items">
-          <ul class="nav navbar-nav navbar-right ml-auto">
-            <!-- navigation menu -->
-            <li class="nav-item">
-              <a data-scroll href="#message"
-                ><i class="fa-solid fa-envelope"></i>&nbsp;メッセージ</a
-              >
-            </li>
-            <li class="nav-item">
-              <a data-scroll href="#location"
-                ><i class="fa-solid fa-location-dot"></i>&nbsp;会場案内</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="2024/index.html">
-                <i class="fa-solid fa-folder"></i>&nbsp;2024 JOFR meets Japan
-              </a>
-            </li>
-          </ul>
-        </div>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#instructors" class="hover:opacity-80">講師</a>
+          <a href="#timetable" class="hover:opacity-80">日程</a>
+          <a href="#pricing" class="hover:opacity-80">参加費</a>
+          <a href="#voices" class="hover:opacity-80">参加者の声</a>
+          <a href="#access" class="hover:opacity-80">開催場所</a>
+          <a
+            href="https://example.com/entry"
+            class="rounded-2xl px-4 py-2 font-semibold lift"
+            style="background-color: #ffd400; color: #000"
+            >エントリー</a
+          >
+        </nav>
       </div>
-      <!-- /.container -->
-    </nav>
-
-    <header id="site-header" class="site-header valign-center">
-      <div class="intro d-flex flex-column justify-content-between">
-        <div style="height: 60px"></div>
-        <h1>
-          Japan trials project <br class="d-block d-sm-none" />KAIZEN 2025
-          <br class="d-block d-sm-none" />by JOFR Academy
-        </h1>
-        <div class="scrolldown"><div class="scrollline"></div></div>
+      <div
+        class="bg-yellow-400 bg-opacity-10 border-t border-white border-opacity-10 text-center text-sm py-2"
+        data-aos="fade-down"
+      >
+        エントリー締切：<strong class="accent">2025/10/12 (日)</strong>
       </div>
     </header>
 
-    <section id="message" class="section message">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class="text-center mb-5">
-              Message from <br class="d-block d-sm-none" />Jonas / JOFR
-            </h2>
+    <!-- ヒーロー -->
+    <section
+      id="top"
+      class="max-w-6xl mx-auto px-4 py-20 flex flex-col lg:flex-row items-center gap-10"
+    >
+      <div class="flex-1" data-aos="fade-up" data-aos-duration="700">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-tight"
+        >
+          日本のトライアルを、<span class="accent">KAIZEN</span>する。
+        </h1>
+        <p
+          class="mt-6 text-base sm:text-lg text-white text-opacity-80 max-w-2xl"
+        >
+          JOFR
+          Academyのトレーニングメソッドで、日本のトライアルレベルを根底からKAIZENします。
+        </p>
+        <div
+          class="mt-8 flex flex-wrap gap-4"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <a
+            href="https://example.com/entry"
+            class="rounded-2xl px-6 py-3 font-bold lift"
+            style="background-color: #ffd400; color: #000"
+            >いますぐエントリー</a
+          >
+        </div>
+      </div>
+      <div
+        class="flex-1 w-full"
+        data-aos="zoom-in"
+        data-aos-duration="700"
+        data-aos-delay="100"
+      >
+        <div
+          class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white ring-opacity-10 ratio ratio-16x10"
+        >
+          <img
+            src="assets/images/7S305139.jpg"
+            alt="Japan trials project KAIZEN 2025"
+            class="object-cover"
+          />
+          <div
+            class="absolute inset-0"
+            style="
+              background: radial-gradient(
+                80% 60% at 20% 0%,
+                rgba(255, 212, 0, 0.12),
+                rgba(0, 0, 0, 0) 60%
+              );
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 講師 -->
+    <section id="instructors" class="max-w-6xl mx-auto px-4" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span>講師
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div
+          class="rounded-3xl overflow-hidden ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-right"
+        >
+          <div class="ratio ratio-16x9">
+            <img
+              src="assets/images/jonas.jpg"
+              alt="Jonas Friedrich"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-6 bg-gray-900">
+            <h3 class="text-xl font-bold">Jonas Friedrich</h3>
+            <p class="accent font-semibold mt-1">ヨナス・フリードリッヒ</p>
+            <p class="mt-3 text-white text-opacity-80">
+              ドイツで活躍した元エリートトライアルライダー。2025年に後進の育成に注力するため現役引退を発表した。
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 jonas_image">&nbsp;</div>
-          <div class="col-md-9">
-            <p>親愛なる日本のトライアルファミリーの皆さんへ！</p>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="ratio ratio-16x9">
+              <img
+                src="https://i.pravatar.cc/480?img=12"
+                alt="佐藤 花子"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold">佐藤 花子</h4>
+              <p class="text-sm text-white text-opacity-70">フィジカルコーチ</p>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="ratio ratio-16x9">
+              <img
+                src="https://i.pravatar.cc/480?img=20"
+                alt="鈴木 健"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold">鈴木 健</h4>
+              <p class="text-sm text-white text-opacity-70">テクニカルコーチ</p>
+            </div>
+          </div>
+          <div
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="ratio ratio-16x9">
+              <img
+                src="https://i.pravatar.cc/480?img=32"
+                alt="田中 真"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold">田中 真</h4>
+              <p class="text-sm text-white text-opacity-70">メンタルコーチ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <p>
-              2024年に2度日本を訪れた後、私は「また戻ってこなければならない」と確信しました。<br />
-              岩村ファミリーと何度も話し合い、アイデアや目標を共有する中で、私は2025年シーズンに多くの時間を日本で過ごすことを決めました。
+    <!-- 講師からのメッセージ -->
+    <section
+      id="instructor-messages"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <div class="space-y-8">
+        <!-- Jonas Friedrich からのメッセージ -->
+        <div
+          class="bg-gray-900 rounded-2xl p-6 ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-right"
+        >
+          <div class="flex-1">
+            <h3 class="text-lg font-bold mb-2">
+              Trial Training Weekend – Tateshina Trial Academy
+            </h3>
+            <p
+              class="text-sm italic text-white text-opacity-80 leading-relaxed"
+            >
+              We are excited to announce that our head coach and special guest,
+              Jonas Friedrich from Germany, will once again be traveling to
+              Japan for this year’s camp.<br />
+              Jonas first visited Japan last year, leading two training camps,
+              and returned earlier this year for a two-month stay from March to
+              May. He is very much looking forward to meeting all the riders,
+              friends, and families again. Jonas is eager to see the progress
+              each rider has made, as well as the renovations at the Tateshina
+              Trial Academy. Above all, he is excited about the conversations
+              and the personal connections before and after the training
+              sessions. The weekend promises to be a wonderful time filled with
+              intense training, great fun, and above all, the sharing of
+              valuable experience and knowledge from coaches and seasoned riders
+              alike.<br />
+              For those interested in additional 1-on-1 coaching or small-group
+              training on the Friday before or Monday after the camp, please
+              feel free to reach out for more details.<br />
+              We can’t wait to see you at the Tateshina Trial Camp – October
+              2025!
             </p>
-
-            <p>
-              2024年に開催した「JOFR meets
-              Japan」キャンプを通じて、日本のトライアルの未来には大きな可能性があることを実感しました。もちろん、日本のトライアルコミュニティ全体を見たわけではありませんが、出会ったライダーやお話ししたご家族の皆さんから、日本のトライアルが持つ可能性を感じ取ることができました。
-              私はこれまでのライディング経験、コーチング経験、そして持っている知識とモチベーションを活かし、日本のトライアルのシステムをさらに次のレベルへと引き上げるサポートをしたいと考えています。
-            </p>
-
-            <p>
-              2025年シーズンについて、いくつかの目標や考えを皆さんと共有したいと思います。<br />
-              まず、2025年3月上旬から5月中旬にかけて再び日本を訪れます。この期間中に、ライダー向けのコーチングを複数回開催し、「蓼科トライアルアカデミー」のコーチング体制を構築し、日本のライダーが将来「コーチ」として活躍できるよう支援していきます。<br />
-              私の日本での主な目標は、<span class="font-weight-bold"
-                >長期的なプロジェクトをスタートさせること</span
-              >です。この期間を一緒に取り組むことで私の物理的なサポートがなくても、将来的に日本のライダーたちが自走できるようなシステムを作り上げることを目指します。<br />
-            </p>
-
-            <p>
-              また、日本の多くのライダーと出会い、日本の大会に参加し、新しい人々と交流しながら素晴らしい時間を過ごしたいと考えています。<br />
-              5月中旬にドイツへ戻った後、6月の第2週には再び日本へ戻る予定です。そして2025年10月末まで「ドイツ
-              ⇄ 日本 / ヨーロッパ ⇄
-              日本」を行き来する計画です。年末の予定についてはまだ100%確定していませんが、すでにほぼ決まっているプランが頭の中にあります。
-            </p>
-
-            <p>
-              すべての計画は<span class="font-weight-bold"
-                >「ステップ・バイ・ステップ」</span
-              >で進めていきます。
-              そこで、この素晴らしい機会にふさわしい名前として<span
-                class="font-weight-bold"
-                >「Japan Trials Project KAIZEN 2025 by JOFR Academy」</span
-              >と名付けることにしました。
-              「KAIZEN（カイゼン）」という言葉とその意味はドイツや世界中でも広く知られています。私は「KAIZEN」を通じて日本のトライアルシステム全体をより高いレベルへと引き上げることができると確信しています。
-              <span class="font-weight-bold"
-                >一緒に、新たなプロフェッショナルなレベルを目指しましょう！</span
-              ><br />
-              トライアルを趣味として楽しんでいる方も、プロライダーを目指し、国内外の大会で競うためにトレーニングしている方も、<span
-                class="font-weight-bold"
-                >「ステップ・バイ・ステップ」</span
-              >で進んでいきましょう。
-            </p>
-
-            <p>
-              最も大切なことは、私たちをつなぐ<span class="font-weight-bold"
-                >ポジティブなつながり</span
-              >です。
-              それは、バイクに乗り、障害物や困難を乗り越え、一緒に楽しい時間を過ごすことです！
-              <span class="font-weight-bold"
-                >親愛なる日本のトライアルファミリーの皆さん、再びお会いできることを本当に楽しみにしています。</span
-              ><br />
-              質問や不明点があれば、気兼ねなく私たちにご連絡ください。<br />
-              この時間を、私たち全員にとって特別で忘れられないものにしましょう！<br />
-              トレーニングキャンプや重要なニュースについては、できるだけ早くこのホームページでお知らせする予定です。<br />
-              それでは、皆さんにとって素晴らしい時間が訪れることを願っています！<br /><br />
-              Best Regards and remember… FULLGAS!<br />
-              Jonas / JOFR
+            <p
+              class="text-white text-opacity-80 leading-relaxed border-t mt-4 pt-4"
+            >
+              ヘッドコーチであり特別ゲストであるドイツのヨナス・フリードリッヒが、今年もキャンプのために来日することをお知らせいたします。<br />
+              ヨナスは昨年初めて来日し2回のトレーニングキャンプを指導、さらに今年3月から5月にかけて2ヶ月間の滞在を果たしました。彼はライダーの皆様、友人、ご家族との再会を心待ちにしております。
+              各ライダーの成長ぶりと、蓼科トライアルアカデミーの改修状況を確認できることを楽しみにしています。何よりも、トレーニングの前後に行われる対話や人的交流を心待ちにしています。
+              週末は、集中トレーニングと楽しいひととき、そして何よりもコーチやベテランライダーから得られる貴重な経験や知識の共有に満ちた素晴らしい時間となるでしょう。<br />
+              キャンプ前日の金曜日または翌月曜日に、追加のマンツーマン指導や少人数グループトレーニングをご希望の方は、詳細についてお気軽にお問い合わせください。<br />
+              2025年10月、蓼科トライアルキャンプでお会いできるのを楽しみにしています！
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe
-                src="https://www.youtube.com/embed/kaE1O9heje0?si=9G_NIN7WHYRQgg81"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+    <!-- 過去のキャンプ -->
+    <section id="past" class="max-w-6xl mx-auto px-4 py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span
+        >過去のキャンプ
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div
+          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          data-aos="zoom-in"
+          data-aos-delay="50"
+        >
+          <a href="./2025_spring/index.html">
+            <div class="ratio ratio-16x9">
+              <img
+                src="./assets/images/2025-spring.jpg"
+                alt="JOFR プレシーズンキャンプ"
+                class="object-cover"
+              />
             </div>
-          </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">JOFR プレシーズンキャンプ</h3>
+              <ul class="mt-4 space-y-1 text-sm text-white text-opacity-80">
+                <li>2025/03/29・30</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div
+          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          data-aos="zoom-in"
+          data-aos-delay="150"
+        >
+          <a href="./2024/index.html">
+            <div class="ratio ratio-16x9">
+              <img
+                src="./assets/images/2024.jpg"
+                alt="JOFR ACADEMY meets JAPAN"
+                class="object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold">JOFR ACADEMY meets JAPAN</h3>
+              <ul class="mt-4 space-y-1 text-sm text-white text-opacity-80">
+                <li>2024/11/2・3・4</li>
+              </ul>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section gallery">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="swiper">
-              <div class="swiper-wrapper"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+    <!-- 動画 -->
+    <section id="video" class="max-w-6xl mx-auto px-4 py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span>動画
+      </h2>
+      <div
+        class="rounded-3xl overflow-hidden ring-1 ring-white ring-opacity-10 bg-gray-900 ratio ratio-16x9 lift"
+        data-aos="zoom-in"
+      >
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/XiAznl3D9mE?rel=0"
+          title="Promo Video"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
 
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
+    <!-- 日程 -->
+    <section id="dates" class="max-w-6xl mx-auto px-4 py-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span>日程
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
+          <div class="text-sm text-white text-opacity-60">開催日</div>
+          <div class="text-xl font-bold mt-1">2025/10/18 (土)</div>
+        </div>
+        <div
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <div class="text-sm text-white text-opacity-60">開催日</div>
+          <div class="text-xl font-bold mt-1">2025/10/19 (日)</div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="section-title">トレーニングキャンプ</h3>
+    <!-- 参加費 -->
+    <section
+      id="pricing"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span>参加費
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- 1Day -->
+        <div
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift text-center"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
+          <h3 class="text-lg font-bold mb-2">1Day</h3>
+          <div class="text-sm text-white text-opacity-60 mb-4">単日参加</div>
+          <div class="text-3xl font-extrabold accent mb-2">¥7,000</div>
+          <p class="mt-4 text-sm text-white text-opacity-80">
+            土曜日または日曜日のいずれか1日のみの参加
+          </p>
+        </div>
+
+        <!-- 2Days -->
+        <div
+          class="rounded-2xl p-6 bg-gray-900 ring-2 ring-yellow-400 lift text-center relative overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="absolute top-0 right-0 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-bl-lg"
+          >
+            おすすめ
           </div>
+          <h3 class="text-lg font-bold mb-2">2Days</h3>
+          <div class="text-sm text-white text-opacity-60 mb-4">両日参加</div>
+          <div class="text-3xl font-extrabold accent mb-2">¥12,000</div>
+          <div class="text-xs accent mt-1">¥2,000 お得!</div>
+          <p class="mt-4 text-sm text-white text-opacity-80">
+            土曜日・日曜日の両日参加
+          </p>
+        </div>
+
+        <!-- Extra Session -->
+        <div
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift text-center"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h3 class="text-lg font-bold mb-2">Extra Session</h3>
+          <div class="text-sm text-white text-opacity-60 mb-4">
+            17時以降の追加セッション
+          </div>
+          <div class="text-3xl font-extrabold accent mb-2">¥2,000</div>
+          <div class="text-xs text-white text-opacity-50">税込</div>
+          <p class="mt-4 text-sm text-white text-opacity-80">
+            個別フィードバックや特別練習セッション
+          </p>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="accordion" id="camp">
-              <div class="card bg-light">
-                <div class="card-header" id="camp-head-01">
-                  <h3 class="section-title mb-0">
-                    <button
-                      class="btn btn-link btn-block text-left text-dark px-0"
-                      style="transform: none"
-                      data-toggle="collapse"
-                      data-target="camp-01"
-                      aria-expanded="true"
-                    >
-                      JOFR プレシーズンキャンプ （2025/03/29・30）
-                    </button>
-                  </h3>
-                </div>
 
-                <div id="camp-01" class="collapse show" data-parent="#camp">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-12 mb-4">
-                        <p>
-                          Japan Trials Project KAIZEN 2025最初のキャンプを「JOFR
-                          プレシーズンキャンプ」として開催します。<br />
-                          2024年に実施されたJOFR meets
-                          JAPANから得た経験と、前回キャンプ終了後にいただいたご意見をもとに、より充実したプログラム構成を予定しています。
-                        </p>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <dl>
-                          <dt>【開催日】</dt>
-                          <dd>2025/03/29・30</dd>
-                          <dt>【開催場所】</dt>
-                          <dd>蓼科トライアルパーク</dd>
-                          <dt>【コーチ】</dt>
-                          <dd>
-                            <ul>
-                              <li>Jonas Friedrich</li>
-                              <li>塩崎 太夢</li>
-                              <li>土屋 凌我</li>
-                              <li>横田 宏太郎</li>
-                            </ul>
-                            <p><small>（予定）</small></p>
-                          </dd>
-                          <dt>【参加費】</dt>
-                          <dd>
-                            <ul>
-                              <li>1Day: 6,000円</li>
-                              <li>2Days: 10,000円</li>
-                            </ul>
-                            <p><small>現地にてお支払いください</small></p>
-                          </dd>
-                          <dt>【備考】</dt>
-                          <dd>雨天決行、荒天中止</dd>
-                        </dl>
-                      </div>
-                      <div class="col-12 col-md-8">
-                        <table class="table table-bordered">
-                          <tr
-                            style="background-color: #c5690e; color: #fff"
-                            class="text-center"
-                          >
-                            <th class="text-center">Time</th>
-                            <th>Lesson</th>
-                          </tr>
-                          <tr>
-                            <td>8:30/9:00</td>
-                            <td class="">
-                              8:30 受付<br />9:00 トレーニング開始
-                            </td>
-                          </tr>
-                          <tr style="background-color: #f3f3f3">
-                            <td>9:00〜12:00</td>
-                            <td class="">トレーニングセッション1</td>
-                          </tr>
-                          <tr>
-                            <td>12:00〜13:00</td>
-                            <td class="text-center">ランチブレイク</td>
-                          </tr>
-                          <tr style="background-color: #f3f3f3">
-                            <td>13:00〜15:00</td>
-                            <td class="">トレーニングセッション2</td>
-                          </tr>
-                          <tr>
-                            <td>15:00〜</td>
-                            <td class="">
-                              フリートレーニング<br />コーチ陣への質問も交えながら各自の課題に取り組む
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <span
-                        target="_blank"
-                        class="btn btn-white btn-block btn-lg"
-                        style="transform: none"
-                      >
-                        申込みは締切りました
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-sm-6 -->
-        </div>
+      <!-- 料金に関する注意事項 -->
+      <div
+        class="mt-8 p-4 bg-black bg-opacity-30 rounded-xl border border-white border-opacity-10"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h4 class="font-semibold mb-3 flex items-center gap-2">
+          <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+          料金について
+        </h4>
+        <ul class="space-y-2 text-sm text-white text-opacity-80">
+          <li>
+            •
+            参加費には保険料は含まれていません。必要に応じて保険に加入してください
+          </li>
+          <li>• お支払いはキャンプ当日に現金でお支払いください</li>
+        </ul>
       </div>
     </section>
 
-    <section id="speakers" class="section speakers bg-dark text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="section-title text-white">コーチ紹介</h3>
-          </div>
+    <!-- タイムスケジュール -->
+    <section
+      id="timetable"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span
+        >タイムスケジュール
+      </h2>
+      <table
+        class="w-full text-left bg-gray-900 rounded-2xl overflow-hidden lift"
+      >
+        <thead class="bg-gray-800">
+          <tr>
+            <th class="px-4 py-2">時間</th>
+            <th class="px-4 py-2">内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 accent">09:00〜12:00</td>
+            <td class="px-4 py-2">トレーニング開始</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 accent">12:00〜13:00</td>
+            <td class="px-4 py-2">ランチブレイク</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 accent">13:00〜17:00</td>
+            <td class="px-4 py-2">トレーニング終了</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 accent">17:00〜18:30</td>
+            <td class="px-4 py-2">
+              Extra Session<span class="text-xs text-white text-opacity-60 ml-4"
+                >(※要追加費用)</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- プライベートレッスン -->
+    <section
+      id="private-lesson"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span
+        >プライベートレッスン
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-right"
+        >
+          <h3 class="text-lg font-bold">Jonasによるマンツーマンレッスン</h3>
+          <p class="mt-2 text-white text-opacity-80">
+            トレーニングキャンプでは得られないコーチとのマンツーマンレッスンを受けることが出来ます。<br />
+            今の自分の課題を発見し、具体的な改善策をエリートライダーから直接得られるこの機会を体験してください。<br />
+            単独でもグループでもお申し込み可能です。
+          </p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="speaker">
-              <figure>
-                <img
-                  alt=""
-                  class="img-fluid center-block rounded"
-                  src="assets/images/jonas-2.jpg"
-                />
-              </figure>
-
-              <h4>Jonas Friedrich</h4>
-
-              <p>ヨナス フリードリッヒ</p>
-            </div>
-            <!-- /.speaker -->
-          </div>
-          <!-- /.col-lg-3 col-md-6 -->
-
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="speaker">
-              <figure>
-                <img
-                  alt=""
-                  class="img-fluid center-block rounded"
-                  src="assets/images/tom.jpg"
-                />
-              </figure>
-
-              <h4>Tom Shiozaki</h4>
-
-              <p>塩崎 太夢</p>
-            </div>
-            <!-- /.speaker -->
-          </div>
-          <!-- /.col-lg-3 col-md-6 -->
-
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="speaker">
-              <figure>
-                <img
-                  alt=""
-                  class="img-fluid center-block rounded"
-                  src="assets/images/ryoga.jpg"
-                />
-              </figure>
-
-              <h4>Ryoga Tuchiya</h4>
-
-              <p>土屋 凌我</p>
-            </div>
-            <!-- /.speaker -->
-          </div>
-          <!-- /.col-lg-3 col-md-6 -->
-
-          <div class="col-lg-3 col-md-6 col-6">
-            <div class="speaker">
-              <figure>
-                <img
-                  alt=""
-                  class="img-fluid center-block rounded"
-                  src="assets/images/kotaro.jpg"
-                />
-              </figure>
-
-              <h4>Kotaro Yokota</h4>
-
-              <p>横田 宏太郎</p>
-            </div>
-            <!-- /.speaker -->
-          </div>
-          <!-- /.col-lg-3 col-md-6 -->
-          <div class="col-12">
-            <small
-              >※コーチ陣はキャンプによって変更される場合があります。詳細は各キャンプの詳細をご確認ください。</small
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-left"
+        >
+          <h4 class="text-lg font-semibold">受付可能日</h4>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1 text-2xl bg-black bg-opacity-40 rounded-full"
+              >2025/10/17 (金)</span
+            >
+            <span class="px-3 py-1 text-2xl bg-black bg-opacity-40 rounded-full"
+              >2025/10/20 (月)</span
             >
           </div>
-        </div>
-        <!-- /.row -->
-      </div>
-    </section>
-
-    <section id="location" class="section location">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3">
-            <h3 class="section-title">会場</h3>
-            <address>
-              <p>
-                〒391-0213 長野県茅野市豊平4218-1<br />
-                蓼科トライアルパーク
-              </p>
-              <p>中央自動車道 諏訪IC/諏訪南ICより車で20分</p>
-
-              <h5>連絡先</h5>
-              <p>
-                岩村 さやか<br />
-                <a href="mailto:tateshinatrialparkjpn@gmail.com"
-                  >tateshinatrialparkjpn@gmail.com</a
-                >
-              </p>
-            </address>
-          </div>
-          <div class="col-sm-9">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12909.327442269521!2d138.2233983!3d36.0121887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c510037d31967%3A0x5de48cc34881fb0b!2z6JO856eR44OI44Op44Kk44Ki44Or44OR44O844Kv!5e0!3m2!1sja!2sjp!4v1724296515618!5m2!1sja!2sjp"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          <h4 class="text-lg font-semibold mt-5">費用</h4>
+          <span class="px-3 py-1 text-sm bg-black bg-opacity-40 rounded-full"
+            ><span class="text-3xl font-extrabold accent">5,500円</span> /
+            時間</span
+          >
+          <p class="mt-4 text-xs text-white text-opacity-60">
+            ※ 先着順。時間帯は個別調整となります。<br />
+            ※ プライベートレッスンのみの参加も可能です。<br />
+            ※ 単独でもグループでも金額は同一です。
+          </p>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p class="site-info">
-              copryright &copy; Japan trials project KAIZEN 実行委員会
-            </p>
-            <ul class="social-block">
-              <li>
-                <a href="" target="_blank"
-                  ><i class="ion-social-facebook"></i
-                ></a>
-              </li>
-            </ul>
+    <!-- 参加者の声 -->
+    <section
+      id="voices"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span
+        >参加者の声
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
+          <p>
+            “たった1日のアドバイスでフォームが激変。翌週の大会で自己ベストを更新できました！”
+          </p>
+          <div class="mt-4 text-sm text-white text-opacity-70">
+            — A.K. さん（社会人・陸上）
+          </div>
+        </div>
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <p>
+            “出力の波がなくなり、終盤の失速が減りました。数値で改善が見えたのが最高。”
+          </p>
+          <div class="mt-4 text-sm text-white text-opacity-70">
+            — M.S. さん（大学生・自転車競技）
+          </div>
+        </div>
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <p>“加速の最初の3歩が速くなり、1対1の勝率が上がりました。”</p>
+          <div class="mt-4 text-sm text-white text-opacity-70">
+            — Y.T. さん（高校生・サッカー）
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 開催場所 -->
+    <section
+      id="access"
+      class="max-w-6xl mx-auto px-4 py-16"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <span class="w-1 h-7" style="background-color: #ffd400"></span>開催場所
+      </h2>
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          data-aos="fade-right"
+        >
+          <h3 class="text-lg font-bold">蓼科トライアルパーク</h3>
+          <p class="mt-2 text-white text-opacity-80">
+            国際レベルにも対応した本格的なトライアル施設。コンクリート部材などの人工物や岩・丸太など自然物を初心者から上級者まで対応できる環境で、技術向上に最適なセクションを提供します。
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white text-opacity-80">
+            <li>〒391-0213 長野県茅野市豊平4218-1</li>
+            <li>中央自動車道 諏訪IC/諏訪南ICより車で20分</li>
+          </ul>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden ring-1 ring-white ring-opacity-10 ratio ratio-16x9 lift"
+          data-aos="fade-left"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12909.327442269521!2d138.2233983!3d36.0121887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c510037d31967%3A0x5de48cc34881fb0b!2z6JO856eR44OI44Op44Kk44Ki44Or44OR44O844Kv!5e0!3m2!1sja!2sjp!4v1724296515618!5m2!1sja!2sjp"
+            title="会場マップ"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA フッター -->
+    <section class="py-16 border-t border-white border-opacity-10 bg-black">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center text-center"
+        data-aos="zoom-in"
+      >
+        <h3 class="text-2xl sm:text-3xl font-extrabold">
+          <span class="accent">期間内</span>にお申し込みください。
+        </h3>
+        <p class="mt-3 text-white text-opacity-80">申込期限：2025/10/12 (日)</p>
+        <a
+          href="https://example.com/entry"
+          class="mt-6 rounded-2xl px-8 py-3 font-bold lift"
+          style="background-color: #ffd400; color: #000"
+          >エントリーフォームへ</a
+        >
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-10 text-center text-sm text-white text-opacity-60">
+      <div class="max-w-6xl mx-auto px-4">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <div>
+            <span id="year"></span> copryright &copy; Japan trials project
+            KAIZEN 実行委員会
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- script -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Scripts -->
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
-    <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.4.0/luminous.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        const images = [
-          "./assets/images/slide/thumb/DSC06460.jpg",
-          "./assets/images/slide/thumb/DSC06748.jpg",
-          "./assets/images/slide/thumb/DSC06759.jpg",
-          "./assets/images/slide/thumb/DSC06139.jpg",
-          "./assets/images/slide/thumb/DSC06571.jpg",
-          "./assets/images/slide/thumb/DSC06662.jpg",
-          "./assets/images/slide/thumb/7S305139.jpg",
-          "./assets/images/slide/thumb/DSC06730.jpg",
-          "./assets/images/slide/thumb/DSC06887.jpg",
-          "./assets/images/slide/thumb/DSC07209.jpg",
-          "./assets/images/slide/thumb/DSC07928.jpg",
-          "./assets/images/slide/thumb/DSC07530.jpg",
-          "./assets/images/slide/thumb/DSC06870.jpg",
-          "./assets/images/slide/thumb/DSC06966.jpg",
-          "./assets/images/slide/thumb/DSC08002.jpg",
-          "./assets/images/slide/thumb/DSC08003.jpg",
-          "./assets/images/slide/thumb/DSC08265.jpg",
-          "./assets/images/slide/thumb/DSC07266.jpg",
-          "./assets/images/slide/thumb/DSC08483.jpg",
-          "./assets/images/slide/thumb/DSC07895.jpg",
-          "./assets/images/slide/thumb/DSC08302.jpg",
-          "./assets/images/slide/thumb/DSC08281.jpg",
-          "./assets/images/slide/thumb/DSC07371.jpg",
-          "./assets/images/slide/thumb/DSC06039.jpg",
-          "./assets/images/slide/thumb/DSC08539.jpg",
-          "./assets/images/slide/thumb/DSC06252.jpg",
-          "./assets/images/slide/thumb/DSC06402.jpg",
-          "./assets/images/slide/thumb/DSC06528.jpg",
-        ]
-        images.forEach(function (img) {
-          $(".swiper-wrapper").append(
-            $("<div/>")
-              .addClass("swiper-slide")
-              .append(
-                $("<a/>")
-                  .attr("href", img.replace("/thumb", ""))
-                  .addClass("lightbox")
-                  .append(
-                    $("<img/>")
-                      .attr("src", img)
-                      .addClass("_img-thumbnail")
-                      .attr("loading", "lazy")
-                  )
-              )
-          )
-        })
-        const swiper = new Swiper(".swiper", {
-          slidesPerView: 4,
-          breakpoints: {
-            600: {
-              slidesPerView: 6,
-            },
-            768: {
-              slidesPerView: 8,
-            },
-            1025: {
-              slidesPerView: 11,
-            },
-          },
-          spaceBetween: 20,
-          loop: true,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-
-          // Navigation arrows
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        })
-        new LuminousGallery(
-          document.querySelectorAll(".lightbox"),
-          {},
-          {
-            onOpen: function () {
-              swiper.autoplay.stop()
-            },
-            onClose: function () {
-              swiper.autoplay.start()
-            },
-          }
-        )
-      })
+    <script>
+      // Init AOS
+      AOS.init({ duration: 700, once: true, easing: "ease-out-cubic" })
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear()
     </script>
   </body>
 </html>
