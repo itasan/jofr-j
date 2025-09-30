@@ -60,10 +60,7 @@
     />
 
     <!-- Tailwind (CDN) -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- AOS (Animate On Scroll) -->
     <link
       rel="stylesheet"
@@ -116,7 +113,7 @@
   <body>
     <!-- ヘッダー -->
     <header
-      class="sticky top-0 z-50 bg-black bg-opacity-70 backdrop-blur border-b border-white border-opacity-10"
+      class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10"
     >
       <div
         class="max-w-6xl mx-auto px-4 h-24 flex items-center justify-between"
@@ -144,7 +141,7 @@
         </nav>
       </div>
       <div
-        class="bg-yellow-400 bg-opacity-10 border-t border-white border-opacity-10 text-center text-sm py-2"
+        class="bg-yellow-400/10 border-t border-white/10 text-center text-sm py-2"
         data-aos="fade-down"
       >
         エントリー締切：<strong class="accent">2025/10/12 (日)</strong>
@@ -162,9 +159,7 @@
         >
           日本のトライアルを、<span class="accent">KAIZEN</span>する。
         </h1>
-        <p
-          class="mt-6 text-base sm:text-lg text-white text-opacity-80 max-w-2xl"
-        >
+        <p class="mt-6 text-base sm:text-lg text-white/80 max-w-2xl">
           JOFR
           Academyのトレーニングメソッドで、日本のトライアルレベルを根底からKAIZENします。
         </p>
@@ -188,7 +183,7 @@
         data-aos-delay="100"
       >
         <div
-          class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white ring-opacity-10 ratio ratio-16x10"
+          class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 ratio ratio-16x10"
         >
           <img
             src="assets/images/7S305139.jpg"
@@ -216,7 +211,7 @@
       </h2>
       <div class="grid lg:grid-cols-2 gap-10">
         <div
-          class="rounded-3xl overflow-hidden ring-1 ring-white ring-opacity-10 lift"
+          class="rounded-3xl overflow-hidden ring-1 ring-white/10 lift"
           data-aos="fade-right"
         >
           <div class="ratio ratio-16x9">
@@ -229,61 +224,58 @@
           <div class="p-6 bg-gray-900">
             <h3 class="text-xl font-bold">Jonas Friedrich</h3>
             <p class="accent font-semibold mt-1">ヨナス・フリードリッヒ</p>
-            <p class="mt-3 text-white text-opacity-80">
+            <p class="mt-3 text-white/80">
               ドイツで活躍した元エリートトライアルライダー。2025年に後進の育成に注力するため現役引退を発表した。
             </p>
           </div>
         </div>
         <div class="grid sm:grid-cols-3 gap-6">
           <div
-            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white/10 lift aspect-square"
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="ratio ratio-16x9">
+            <div class="">
               <img
                 src="https://i.pravatar.cc/480?img=12"
-                alt="佐藤 花子"
-                class="object-cover"
+                alt="山下 虎威"
+                class="object-cover aspect-16/12"
               />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">佐藤 花子</h4>
-              <p class="text-sm text-white text-opacity-70">フィジカルコーチ</p>
+            <div class="p-2">
+              <h4 class="font-semibold">山下 虎威</h4>
             </div>
           </div>
           <div
-            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white/10 lift aspect-square"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="ratio ratio-16x9">
+            <div class="aspect-16/9">
               <img
                 src="https://i.pravatar.cc/480?img=20"
-                alt="鈴木 健"
-                class="object-cover"
+                alt="岩村 昌幸"
+                class="object-cover aspect-16/12"
               />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">鈴木 健</h4>
-              <p class="text-sm text-white text-opacity-70">テクニカルコーチ</p>
+            <div class="p-2">
+              <h4 class="font-semibold">岩村 昌幸</h4>
             </div>
           </div>
           <div
-            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+            class="rounded-2xl overflow-hidden bg-gray-900 ring-1 ring-white/10 lift aspect-square"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="ratio ratio-16x9">
+            <div class="aspect-16/9">
               <img
                 src="https://i.pravatar.cc/480?img=32"
-                alt="田中 真"
-                class="object-cover"
+                alt="板谷 彼香"
+                class="object-cover aspect-16/12"
               />
             </div>
-            <div class="p-4">
-              <h4 class="font-semibold">田中 真</h4>
-              <p class="text-sm text-white text-opacity-70">メンタルコーチ</p>
+            <div class="p-2">
+              <h4 class="font-semibold">板谷 彼香</h4>
             </div>
           </div>
         </div>
@@ -299,16 +291,14 @@
       <div class="space-y-8">
         <!-- Jonas Friedrich からのメッセージ -->
         <div
-          class="bg-gray-900 rounded-2xl p-6 ring-1 ring-white ring-opacity-10 lift"
+          class="bg-gray-900 rounded-2xl p-6 ring-1 ring-white/10 lift"
           data-aos="fade-right"
         >
           <div class="flex-1">
             <h3 class="text-lg font-bold mb-2">
               Trial Training Weekend – Tateshina Trial Academy
             </h3>
-            <p
-              class="text-sm italic text-white text-opacity-80 leading-relaxed"
-            >
+            <p class="text-sm italic text-white/80 leading-relaxed">
               We are excited to announce that our head coach and special guest,
               Jonas Friedrich from Germany, will once again be traveling to
               Japan for this year’s camp.<br />
@@ -329,9 +319,7 @@
               We can’t wait to see you at the Tateshina Trial Camp – October
               2025!
             </p>
-            <p
-              class="text-white text-opacity-80 leading-relaxed border-t mt-4 pt-4"
-            >
+            <p class="text-white/80 leading-relaxed border-t mt-4 pt-4">
               ヘッドコーチであり特別ゲストであるドイツのヨナス・フリードリッヒが、今年もキャンプのために来日することをお知らせいたします。<br />
               ヨナスは昨年初めて来日し2回のトレーニングキャンプを指導、さらに今年3月から5月にかけて2ヶ月間の滞在を果たしました。彼はライダーの皆様、友人、ご家族との再会を心待ちにしております。
               各ライダーの成長ぶりと、蓼科トライアルアカデミーの改修状況を確認できることを楽しみにしています。何よりも、トレーニングの前後に行われる対話や人的交流を心待ちにしています。
@@ -352,7 +340,7 @@
       </h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div
-          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white/10 lift"
           data-aos="zoom-in"
           data-aos-delay="50"
         >
@@ -366,14 +354,14 @@
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold">JOFR プレシーズンキャンプ</h3>
-              <ul class="mt-4 space-y-1 text-sm text-white text-opacity-80">
+              <ul class="mt-4 space-y-1 text-sm text-white/80">
                 <li>2025/03/29・30</li>
               </ul>
             </div>
           </a>
         </div>
         <div
-          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          class="rounded-3xl overflow-hidden bg-gray-900 ring-1 ring-white/10 lift"
           data-aos="zoom-in"
           data-aos-delay="150"
         >
@@ -387,7 +375,7 @@
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold">JOFR ACADEMY meets JAPAN</h3>
-              <ul class="mt-4 space-y-1 text-sm text-white text-opacity-80">
+              <ul class="mt-4 space-y-1 text-sm text-white/80">
                 <li>2024/11/2・3・4</li>
               </ul>
             </div>
@@ -402,7 +390,7 @@
         <span class="w-1 h-7" style="background-color: #ffd400"></span>動画
       </h2>
       <div
-        class="rounded-3xl overflow-hidden ring-1 ring-white ring-opacity-10 bg-gray-900 ratio ratio-16x9 lift"
+        class="rounded-3xl overflow-hidden ring-1 ring-white/10 bg-gray-900 ratio ratio-16x9 lift"
         data-aos="zoom-in"
       >
         <iframe
@@ -422,19 +410,19 @@
       </h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div
-          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white/10 lift"
           data-aos="fade-up"
           data-aos-delay="50"
         >
-          <div class="text-sm text-white text-opacity-60">開催日</div>
+          <div class="text-sm text-white/60">開催日</div>
           <div class="text-xl font-bold mt-1">2025/10/18 (土)</div>
         </div>
         <div
-          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift"
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white/10 lift"
           data-aos="fade-up"
           data-aos-delay="150"
         >
-          <div class="text-sm text-white text-opacity-60">開催日</div>
+          <div class="text-sm text-white/60">開催日</div>
           <div class="text-xl font-bold mt-1">2025/10/19 (日)</div>
         </div>
       </div>
@@ -452,14 +440,14 @@
       <div class="grid md:grid-cols-3 gap-6">
         <!-- 1Day -->
         <div
-          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift text-center"
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white/10 lift text-center"
           data-aos="fade-up"
           data-aos-delay="50"
         >
           <h3 class="text-lg font-bold mb-2">1Day</h3>
-          <div class="text-sm text-white text-opacity-60 mb-4">単日参加</div>
+          <div class="text-sm text-white/60 mb-4">単日参加</div>
           <div class="text-3xl font-extrabold accent mb-2">¥7,000</div>
-          <p class="mt-4 text-sm text-white text-opacity-80">
+          <p class="mt-4 text-sm text-white/80">
             土曜日または日曜日のいずれか1日のみの参加
           </p>
         </div>
@@ -476,27 +464,23 @@
             おすすめ
           </div>
           <h3 class="text-lg font-bold mb-2">2Days</h3>
-          <div class="text-sm text-white text-opacity-60 mb-4">両日参加</div>
+          <div class="text-sm text-white/60 mb-4">両日参加</div>
           <div class="text-3xl font-extrabold accent mb-2">¥12,000</div>
           <div class="text-xs accent mt-1">¥2,000 お得!</div>
-          <p class="mt-4 text-sm text-white text-opacity-80">
-            土曜日・日曜日の両日参加
-          </p>
+          <p class="mt-4 text-sm text-white/80">土曜日・日曜日の両日参加</p>
         </div>
 
         <!-- Extra Session -->
         <div
-          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white ring-opacity-10 lift text-center"
+          class="rounded-2xl p-6 bg-gray-900 ring-1 ring-white/10 lift text-center"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           <h3 class="text-lg font-bold mb-2">Extra Session</h3>
-          <div class="text-sm text-white text-opacity-60 mb-4">
-            17時以降の追加セッション
-          </div>
+          <div class="text-sm text-white/60 mb-4">17時以降の追加セッション</div>
           <div class="text-3xl font-extrabold accent mb-2">¥2,000</div>
-          <div class="text-xs text-white text-opacity-50">税込</div>
-          <p class="mt-4 text-sm text-white text-opacity-80">
+          <div class="text-xs text-white/50">税込</div>
+          <p class="mt-4 text-sm text-white/80">
             個別フィードバックや特別練習セッション
           </p>
         </div>
@@ -504,7 +488,7 @@
 
       <!-- 料金に関する注意事項 -->
       <div
-        class="mt-8 p-4 bg-black bg-opacity-30 rounded-xl border border-white border-opacity-10"
+        class="mt-8 p-4 bg-black/30 rounded-xl ring ring-white/10"
         data-aos="fade-up"
         data-aos-delay="300"
       >
@@ -512,7 +496,7 @@
           <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
           料金について
         </h4>
-        <ul class="space-y-2 text-sm text-white text-opacity-80">
+        <ul class="space-y-2 text-sm text-white/80">
           <li>
             •
             参加費には保険料は含まれていません。必要に応じて保険に加入してください
@@ -557,7 +541,7 @@
           <tr>
             <td class="px-4 py-2 accent">17:00〜18:30</td>
             <td class="px-4 py-2">
-              Extra Session<span class="text-xs text-white text-opacity-60 ml-4"
+              Extra Session<span class="text-xs text-white/60 ml-4"
                 >(※要追加費用)</span
               >
             </td>
@@ -578,35 +562,35 @@
       </h2>
       <div class="grid lg:grid-cols-2 gap-8">
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-right"
         >
           <h3 class="text-lg font-bold">Jonasによるマンツーマンレッスン</h3>
-          <p class="mt-2 text-white text-opacity-80">
+          <p class="mt-2 text-white/80">
             トレーニングキャンプでは得られないコーチとのマンツーマンレッスンを受けることが出来ます。<br />
             今の自分の課題を発見し、具体的な改善策をエリートライダーから直接得られるこの機会を体験してください。<br />
             単独でもグループでもお申し込み可能です。
           </p>
         </div>
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-left"
         >
           <h4 class="text-lg font-semibold">受付可能日</h4>
           <div class="mt-3 flex flex-wrap gap-2">
-            <span class="px-3 py-1 text-2xl bg-black bg-opacity-40 rounded-full"
+            <span class="px-3 py-1 text-2xl bg-black/40 rounded-full"
               >2025/10/17 (金)</span
             >
-            <span class="px-3 py-1 text-2xl bg-black bg-opacity-40 rounded-full"
+            <span class="px-3 py-1 text-2xl bg-black/40 rounded-full"
               >2025/10/20 (月)</span
             >
           </div>
           <h4 class="text-lg font-semibold mt-5">費用</h4>
-          <span class="px-3 py-1 text-sm bg-black bg-opacity-40 rounded-full"
+          <span class="px-3 py-1 text-sm bg-black/40 rounded-full"
             ><span class="text-3xl font-extrabold accent">5,500円</span> /
             時間</span
           >
-          <p class="mt-4 text-xs text-white text-opacity-60">
+          <p class="mt-4 text-xs text-white/60">
             ※ 先着順。時間帯は個別調整となります。<br />
             ※ プライベートレッスンのみの参加も可能です。<br />
             ※ 単独でもグループでも金額は同一です。
@@ -627,36 +611,36 @@
       </h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-up"
           data-aos-delay="0"
         >
           <p>
             “たった1日のアドバイスでフォームが激変。翌週の大会で自己ベストを更新できました！”
           </p>
-          <div class="mt-4 text-sm text-white text-opacity-70">
+          <div class="mt-4 text-sm text-white/70">
             — A.K. さん（社会人・陸上）
           </div>
         </div>
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           <p>
             “出力の波がなくなり、終盤の失速が減りました。数値で改善が見えたのが最高。”
           </p>
-          <div class="mt-4 text-sm text-white text-opacity-70">
+          <div class="mt-4 text-sm text-white/70">
             — M.S. さん（大学生・自転車競技）
           </div>
         </div>
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           <p>“加速の最初の3歩が速くなり、1対1の勝率が上がりました。”</p>
-          <div class="mt-4 text-sm text-white text-opacity-70">
+          <div class="mt-4 text-sm text-white/70">
             — Y.T. さん（高校生・サッカー）
           </div>
         </div>
@@ -674,20 +658,20 @@
       </h2>
       <div class="grid lg:grid-cols-2 gap-8 items-start">
         <div
-          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white ring-opacity-10 lift"
+          class="p-6 bg-gray-900 rounded-2xl ring-1 ring-white/10 lift"
           data-aos="fade-right"
         >
           <h3 class="text-lg font-bold">蓼科トライアルパーク</h3>
-          <p class="mt-2 text-white text-opacity-80">
+          <p class="mt-2 text-white/80">
             国際レベルにも対応した本格的なトライアル施設。コンクリート部材などの人工物や岩・丸太など自然物を初心者から上級者まで対応できる環境で、技術向上に最適なセクションを提供します。
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white text-opacity-80">
+          <ul class="mt-4 space-y-2 text-sm text-white/80">
             <li>〒391-0213 長野県茅野市豊平4218-1</li>
             <li>中央自動車道 諏訪IC/諏訪南ICより車で20分</li>
           </ul>
         </div>
         <div
-          class="rounded-2xl overflow-hidden ring-1 ring-white ring-opacity-10 ratio ratio-16x9 lift"
+          class="rounded-2xl overflow-hidden ring-1 ring-white/10 ratio ratio-16x9 lift"
           data-aos="fade-left"
         >
           <iframe
@@ -700,7 +684,7 @@
     </section>
 
     <!-- CTA フッター -->
-    <section class="py-16 border-t border-white border-opacity-10 bg-black">
+    <section class="py-16 border-t border-white/10 bg-black">
       <div
         class="max-w-6xl mx-auto px-4 flex flex-col items-center text-center"
         data-aos="zoom-in"
@@ -708,7 +692,7 @@
         <h3 class="text-2xl sm:text-3xl font-extrabold">
           <span class="accent">期間内</span>にお申し込みください。
         </h3>
-        <p class="mt-3 text-white text-opacity-80">申込期限：2025/10/12 (日)</p>
+        <p class="mt-3 text-white/80">申込期限：2025/10/12 (日)</p>
         <a
           href="https://example.com/entry"
           class="mt-6 rounded-2xl px-8 py-3 font-bold lift"
@@ -719,7 +703,7 @@
     </section>
 
     <!-- フッター -->
-    <footer class="py-10 text-center text-sm text-white text-opacity-60">
+    <footer class="py-10 text-center text-sm text-white/60">
       <div class="max-w-6xl mx-auto px-4">
         <div
           class="flex flex-col sm:flex-row items-center justify-between gap-4"
